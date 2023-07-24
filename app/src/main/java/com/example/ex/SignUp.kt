@@ -33,11 +33,17 @@ class SignUp : AppCompatActivity() {
         btnSignUp = findViewById(R.id.btnSignUp)
 
         btnSignUp.setOnClickListener {
+            //set value for call the signup function
             val name = edtName.text.toString()
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
             val role = "student"
-            signUp(name, email, password, role)
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                signUp(name, email, password, role)
+            } else {
+                Toast.makeText(applicationContext,"Please, enter a Name, Email, and Password",Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -48,12 +54,12 @@ class SignUp : AppCompatActivity() {
                 if (task.isSuccessful) {
                     //code for jumping to home
                     addUserToDatabase(name, email, mAuth.currentUser?.uid!!, role)
-                    val intent = Intent(this@SignUp, Homepage::class.java)
+                    val intent = Intent(this@SignUp, MainActivity::class.java)
                     finish()
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(this@SignUp, "Some error occurred", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
                 }
             }
     }

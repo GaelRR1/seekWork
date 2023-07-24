@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Top half of color-->
+        <View
+            android:id="@+id/top_half"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/blueb"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/bottom_half" />
+
+        <!--Bottom half of color-->
+        <View
+            android:id="@+id/bottom_half"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--Wave image-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/fade1" />
+
+        <!--User name logo-->
+        <TextView
+            android:id="@+id/profile5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="40dp"
+            android:text="Welcome to Comment Section"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/profile_background"/>
+
+        <EditText
+            android:id="@+id/subComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile5"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/message_box_background"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="What is the main subject of the Comment."
+            android:textColorHint="@color/black"
+            android:textStyle="bold"
+            android:paddingHorizontal="5dp"/>
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subComment"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/message_box_background"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:hint="Place Your Comment."
+            android:textColorHint="@color/black"
+            android:textStyle="bold"
+            android:paddingHorizontal="5dp"/>
+
+        <!--Add teacher button-->
+        <Button
+            android:id="@+id/addComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/btn_background"
+            android:hint="Comment"
+            android:textColorHint="@color/black"
+            android:textStyle="normal"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

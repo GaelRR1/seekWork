@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="isWork"
+            type="com.example.ex.adapter.WorkData" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="16dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivWork1"
+                android:layout_width="300dp"
+                android:imageUrl="@{isWork.image}"
+                android:layout_height="300dp"
+                android:layout_below="@id/workText"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/workName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginVertical="10dp"
+                android:text="@{isWork.name}"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/workSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/workName"
+                android:layout_marginLeft="10dp"
+                android:text="@{isWork.subject}"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/workText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginVertical="10dp"
+                android:text="@{isWork.text}"
+                android:textColor="@color/black"
+                android:layout_below="@id/workSubject"/>
+
+            <View
+                android:layout_below="@id/ivWork1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

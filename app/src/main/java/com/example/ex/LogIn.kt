@@ -40,10 +40,15 @@ class LogIn : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener {
-            val email = edtEmail.text.toString()
-            val password = edtPassword.text.toString()
+            //set values and call the login function
+            var email = edtEmail.text.toString()
+            var password = edtPassword.text.toString()
 
-            login(email,password)
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                login(email, password)
+            } else {
+                Toast.makeText(applicationContext,"Please, Enter an Email and Password",Toast.LENGTH_SHORT).show()
+            }
         }
 
     }
@@ -54,12 +59,12 @@ class LogIn : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // CODE FOR LOGGING IN
-                    val intent = Intent(this@LogIn, Homepage::class.java)
+                    val intent = Intent(this@LogIn, MainActivity::class.java)
                     finish()
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(this@LogIn, "User does not exist", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Error in Registration",Toast.LENGTH_SHORT).show()
                 }
             }
     }

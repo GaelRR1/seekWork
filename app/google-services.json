@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "119195701765",
+    "firebase_url": "https://chat-application-1221342322111-default-rtdb.firebaseio.com",
     "project_id": "chat-application-1221342322111",
     "storage_bucket": "chat-application-1221342322111.appspot.com"
   },
@@ -9,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:119195701765:android:ec7c02a93bedebfd5c826c",
         "android_client_info": {
-          "package_name": "com.example.chatapplication"
+          "package_name": "com.example.ex"
         }
       },
       "oauth_client": [

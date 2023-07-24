@@ -6,13 +6,72 @@
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Home"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="60dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Top half of color-->
+        <View
+            android:id="@+id/top_half"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/blueb"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/bottom_half" />
+
+        <!--Bottom half of color-->
+        <View
+            android:id="@+id/bottom_half"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--Wave image-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/fade1" />
+
+        <!--User name logo-->
+        <TextView
+            android:id="@+id/profile6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="40dp"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/profile_background"/>
+
+        <!--Welcome Text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Homepage.\nGo were you need using the menu"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/profile6"
+            android:layout_marginTop="40dp"/>
+
+
+
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="work"
+            type="com.example.ex.Work" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivWork"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@id/workText"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/workName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="10dp"
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/workSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workName"
+            android:layout_marginLeft="10dp"
+            android:text="subject" />
+
+        <TextView
+            android:id="@+id/workText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="10dp"
+            android:text="text"
+            android:layout_below="@id/workSubject"/>
+
+        <View
+            android:layout_below="@id/ivWork"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+
+</layout>

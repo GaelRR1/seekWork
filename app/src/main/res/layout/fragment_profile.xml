@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Top half of color-->
+        <View
+            android:id="@+id/top_half"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/blueb"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/bottom_half" />
+
+        <!--Bottom half of color-->
+        <View
+            android:id="@+id/bottom_half"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--Wave image-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/fade1" />
+
+        <!--User name logo-->
+        <TextView
+            android:id="@+id/profile5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="40dp"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/profile_background"/>
+
+        <!--Name description place holder-->
+        <TextView
+            android:id="@+id/name_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile5"
+            android:layout_marginTop="40dp"
+            android:text="Name: "
+            android:background="@drawable/message_box_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!--Email place holder-->
+        <TextView
+            android:id="@+id/email_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_profile"
+            android:layout_marginTop="10dp"
+            android:text="Email: "
+            android:background="@drawable/message_box_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!--Uid place holder-->
+        <TextView
+            android:id="@+id/uid_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_profile"
+            android:layout_marginTop="10dp"
+            android:text="Uid: "
+            android:background="@drawable/message_box_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!--Role place holder-->
+        <TextView
+            android:id="@+id/role_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uid_profile"
+            android:layout_marginTop="10dp"
+            android:text="Role: "
+            android:textColor="@color/black"
+            android:background="@drawable/message_box_background"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!--Add teacher button-->
+        <Button
+            android:id="@+id/addProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/btn_background"
+            android:hint="Add"
+            android:textColorHint="@color/black"
+            android:textStyle="normal"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
