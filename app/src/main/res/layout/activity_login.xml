@@ -82,6 +82,7 @@
         android:layout_marginTop="10dp"
         android:hint="Password"
         android:singleLine="true"
+        app:passwordToggleEnabled="true"
         android:maxLines="1"
         android:textColorHint="@color/black"
         android:paddingLeft="13dp"

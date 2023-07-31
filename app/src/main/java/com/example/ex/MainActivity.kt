@@ -140,8 +140,6 @@ class MainActivity : AppCompatActivity() {
         val headerView: View = navView.getHeaderView(0)
         myTextView6 = headerView.findViewById(R.id.user_name1)
         myTextView6.text = name
-        myTextView7 = headerView.findViewById(R.id.email_name)
-        myTextView7.text = email
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
