@@ -103,7 +103,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_settings -> intenthold(studentslist())
                 R.id.nav_LogIn -> logOut()
                 R.id.nav_share -> replaceFragment(Comments(), it.title.toString())
-                R.id.nav_rate_us -> Toast.makeText(applicationContext,"clicked Rate",Toast.LENGTH_SHORT).show()
             }
 
             it.isChecked = true
