@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     // send variables to other places
     companion object {
         var name: String = ""

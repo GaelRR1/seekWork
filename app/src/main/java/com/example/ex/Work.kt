@@ -15,6 +15,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ex.MainActivity.Companion.role
 import com.example.ex.databinding.ActivityWorkBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.FirebaseDatabase
@@ -61,6 +62,8 @@ class Work : AppCompatActivity() {
             }
         }
 
+
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.imageView.setOnClickListener {
@@ -71,17 +74,27 @@ class Work : AppCompatActivity() {
         }
 
         binding.btnUpload.setOnClickListener {
-            val name1 = nameUP.text.toString()
-            val text1 = textUP.text.toString()
-            count = count +1
-            val newName = "$name1 ___$count"
+            if (role == "Teacher" || role == "owner"){
 
-            uploadImageToStorage(newName).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val downloadUrl = task.result.toString()
-                    uploadFolder(newName, subject1, text1, downloadUrl)
+                val name1 = nameUP.text.toString()
+                val text1 = textUP.text.toString()
+                count = count +1
+                val newName = "$name1 ___$count"
+
+                uploadImageToStorage(newName).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val downloadUrl = task.result.toString()
+                        uploadFolder(newName, subject1, text1, downloadUrl)
+                        Toast.makeText(applicationContext, "Uploaded", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(applicationContext, "Not Possible", Toast.LENGTH_SHORT).show()
+                    }
                 }
+
+            } else {
+                Toast.makeText(applicationContext, "Not Authorized", Toast.LENGTH_SHORT).show()
             }
+
         }
     }
 
